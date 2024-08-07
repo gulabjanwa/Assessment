@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resgistration Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>Student Registration Form</h1>
+    <div class="container">
+        <form action="#">
+            <div class="first-name">
+                <label for="first-name">First Name :</label>
+                <input class="fname" type="text" id="first-name" placeholder="Enter your first name" minlength="3" maxlength="6">
+            </div>
+            <div class="last-name">
+                <label for="last-name">Last Name :</label>
+                <input class="fname" type="text" id="last-name" placeholder="Enter your last name" minlength="3" maxlength="6">
+            </div>
+            <div class="e-mail">
+                <label for="email">Email :</label>
+                <input class="box3" type="email" id="email" placeholder="it should contain @....">
+            </div>
+            <div class="mobile-no">
+                <label for="number">Mobile :</label>
+                <input class="box4" type="text" id="number" placeholder="only 10 digit are allowed" maxlength="10">
+            </div>
+            <div class="gender-bar">
+                <label for="name">Gender :</label>
+                <input class="box5" type="radio" id="male" name="same">
+                <label for="male">Male</label>
+                <input class="box6" type="radio" id="female" name="same">
+                <label for="female">Female</label>
+            </div>
+            <div class="birth">
+                <label for="date">Date of Birth :</label>
+                <input class="box7" type="date" id="date" required>
+            </div>
+            <div class="address">
+                <label for="text">Address :</label>
+                <textarea class="box8" name="address" id="text"></textarea>
+            </div>
+            <div class="city">
+                <label for="city">City:</label>
+                <input class="box9" type="text" id="city">
+
+            </div>
+            <div class="area-pin">
+                <label for="pin">Area PIN :</label>
+                <input class="box10" type="text" id="pin">
+            </div>
+            <div class="state">
+                <label for="state">State :</label>
+                <input class="box11" type="text" id="state">
+            </div>
+            <div class="qualification">Qualification :
+                <select name="a" id="#box12">
+                    <option value="">select qualification</option>
+                    <option value="">10th </option>
+                    <option value="">12th </option>
+                    <option value="">graduation</option>
+                </select>
+            </div>
+            <div class="specialization">Specialization:
+
+                <input type="checkbox" id="check">
+                <label for="check">Computer science </label><br>
+                <input type="checkbox" id="check1">
+                <label for="check">Information technology </label><br>
+                <input type="checkbox" id="check1">
+                <label for="check">Computer Architecture</label><br>
+                <input type="checkbox" id="check1">
+                <label for="check">Tele Communication</label>br
+
+            </div>
+            <div class="password">
+                <label for="pass">Password :</label>
+                <input class="box13" type="password" id="pass" required>
+            </div>
+            <div class="button">
+
+                <input class="box14" type="submit" value="Registered" id="regis">
+            </div>
+        </form>
+    </div>
+
+
+</body>
+
+</html>
