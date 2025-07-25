@@ -1,0 +1,78 @@
+import React, { useState } from 'react';
+
+export default function App() {
+  const accordionData = [
+    {
+      title: 'What is your return policy?',
+      content: 'A return policy is a set of rules and guidelines established by a seller or business that outlines the conditions under which a customer can return, exchange, or get a refund for a purchased product.'
+    },
+    {
+      title: 'How do I track my order?',
+      content: '“To track your order, use the tracking number provided in your shipment confirmation email. You can enter this number on our carrier’s website to see real-time updates on your delivery.”'
+    },
+    {
+      title: 'Can I purchase item again ?',
+      content: '"Love this item? Click Purchase Again to quickly reorder it with your saved preferences!"'
+    }
+  ];
+
+  return (
+    <div>
+      <Accordion data={accordionData} />
+    </div>
+  );
+}
+
+function Accordion({ data }) {
+  const [activeIndex, setActiveIndex] = useState(-1);
+
+  const toggleAccordion = (index) => {
+    if (activeIndex === index) {
+      console.log(`Accordion ${index + 1} closed`);
+      setActiveIndex(-1);
+    } else {
+      console.log(`Accordion ${index + 1} opened`);
+      setActiveIndex(index);
+    }
+  };
+
+  return (
+    <div style={{ width: '500px', margin: 'auto', fontFamily: 'Arial' }}>
+      <h2>React Accordion</h2>
+      {data.map((item, index) => (
+        <div
+          key={index}
+          style={{
+            marginBottom: '10px',
+            border: '1px solid #ccc',
+            borderRadius: '4px'
+          }}
+        >
+          <div
+            onClick={() => toggleAccordion(index)}
+            style={{
+              cursor: 'pointer',
+              padding: '10px 15px',
+              backgroundColor: '#f0f0f0',
+              fontWeight: 'bold'
+            }}
+          >
+            {item.title}
+          </div>
+
+          {activeIndex === index && (
+            <div
+              style={{
+                padding: '10px 15px',
+                backgroundColor: '#fff',
+                borderTop: '1px solid #ccc'
+              }}
+            >
+              {item.content}
+            </div>
+          )}
+        </div>
+      ))}
+    </div>
+  );
+}
